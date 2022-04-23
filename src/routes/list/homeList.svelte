@@ -12,7 +12,7 @@
 		fetch('https://a8ce727f-0a6e-4f3d-bfe2-5021002c9701.mock.pstmn.io/ideas')
 			.then(response => response.json())
 			.then(ideas => {
-				webIdeas.set(ideas);
+				webIdeas.set(ideas.sort((a, b) => b.votes - a.votes));
 			})
 			.catch(() => {
 				return [];
@@ -28,7 +28,7 @@
 <LayoutGrid>
 	{#each $webIdeas.slice(0, 20) as idea}
 		<Cell>
-			<Project {...idea}/>
+			<Project {...idea} />
 		</Cell>
 	{/each}
 </LayoutGrid>
