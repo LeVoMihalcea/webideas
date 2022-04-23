@@ -1,2 +1,22 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+	import HomeList from './list/homeList.svelte';
+</script>
+
+<div class='container'>
+	<h3>Web Ideas</h3>
+	<HomeList />
+</div>
+
+<style>
+		.container{
+				width: 80%;
+				margin: 0 auto;
+		}
+
+
+    @media (max-width: 1500px) {
+        .container {
+            width: 100%;
+        }
+    }
+</style>
