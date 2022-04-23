@@ -1,17 +1,11 @@
 <script>
-	import { onMount } from 'svelte';
-
-	import Card, { Content, Actions } from '@smui/card';
+	import Card, { Actions, Content } from '@smui/card';
 	import Chip, { Set, Text } from '@smui/chips';
 
 	export let id;
 	export let name;
 	export let technologies = [];
 	export let votes;
-
-	onMount(() => {
-		console.log(name);
-	});
 </script>
 
 <Card>
