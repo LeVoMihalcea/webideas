@@ -1,22 +1,34 @@
 <script>
 	import HomeList from './list/homeList.svelte';
+
+	import TopAppBar, { Row, Section, Title } from '@smui/top-app-bar';
 </script>
 
+<!--https://www.npmjs.com/package/@smui/top-app-bar-->
+<TopAppBar
+	variant='static'
+>
+	<Row>
+		<Section>
+			<Title>Web Ideas</Title>
+		</Section>
+	</Row>
+</TopAppBar>
+
 <div class='container'>
-	<h3>Web Ideas</h3>
 	<HomeList />
 </div>
 
 <style>
-		.container{
-				width: 80%;
-				margin: 0 auto;
-		}
+    .container {
+        width: 80%;
+        margin: 0 auto;
+    }
 
 
     @media (max-width: 1500px) {
         .container {
-            width: 100%;
+            width: 95%;
         }
     }
 </style>
